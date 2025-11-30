@@ -1,0 +1,46 @@
+/* --- Tipografía --- */
+.font-beth { font-family: "Beth Ellen", cursive; }
+.font-outfit { font-family: "Outfit", sans-serif; }
+.font-raleway { font-family: "Raleway", sans-serif; }
+
+/* --- Ajustes Globales --- */
+a { text-decoration: none; color: inherit; }
+section { scroll-margin-top: 100px; } /* Evita que el navbar tape el título al hacer clic */
+
+/* --- Navbar --- */
+.custom-nav-border {
+    border-bottom: 10px solid black;
+}
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white; 
+}
+
+/* --- Hero Section --- */
+.hero-bg {
+    background-image: url("assets/imagenes/qnportada.jpeg"); /* Asegúrate que esta ruta sea correcta */
+    background-size: cover;
+    background-position: center;
+    /* Oscurecemos un poco la imagen para que se lea el texto blanco encima */
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5); 
+    padding-top: 80px; /* Espacio para el navbar fijo */
+}
+
+.hero-text {
+    font-size: 32px;
+    max-width: 1300px;
+    margin: 0 auto;
+    text-shadow: 0 4px 4px black, 0 4px 4px black;
+}
+
+/* Ajustes responsivos manuales para tamaños de letra gigantes */
+@media (max-width: 992px) {
+    .hero-bg h1 { font-size: 50px; }
+    .hero-text { font-size: 20px; }
+}
+
+/* --- Títulos --- */
+.titulo-seccion {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
