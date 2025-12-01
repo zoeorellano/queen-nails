@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Whitecapel';
-    src: url('assets/fuentes/WhiteCapel.otf') format('opentype'); 
+    src: url('assets/fuentes/WhiteCapel.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -11,10 +11,6 @@ body {
 
 .font-whitecapel {
     font-family: 'whitecapel', sans-serif;
-}
-
-.font-beth {
-    font-family: "Beth Ellen", cursive;
 }
 
 .font-outfit {
@@ -38,10 +34,28 @@ section {
     border-bottom: 10px solid black;
 }
 
-.navbar-nav .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+
+#navbarNav .nav-item .nav-link {
+    position: relative;
+    color: black !important;
 }
+
+#navbarNav .nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+#navbarNav .nav-item .nav-link:hover::after {
+    width: 70%;
+}
+
 
 .hero-bg {
     background-image: url("assets/imagenes/qnportada.jpeg");
@@ -58,17 +72,26 @@ section {
     text-shadow: 0 4px 4px black, 0 4px 4px black;
 }
 
+.hero-title {
+    font-size: 7rem;
+    line-height: 0.9;
+    padding-bottom: 20px;
+}
+
 @media (max-width: 992px) {
-    .hero-bg h1 {
-        font-size: 50px;
+    .hero-title {
+        font-size: 4rem;
+        line-height: 1.1;
     }
 
     .hero-text {
-        font-size: 20px;
+        font-size: 16px !important;
     }
 }
 
-.titulo-seccion {
-    font-size: 40px;
-    margin-bottom: 15px;
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 3rem;
+    }
 }
