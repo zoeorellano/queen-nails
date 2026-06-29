@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Whitecapel', sans-serif;
-    overflow-x: hidden; /* Corta el desborde fantasma que hacía temblar la web en iPhone */
+    overflow-x: hidden; 
 }
 
 .font-whitecapel {
@@ -56,7 +56,6 @@ section {
     width: 70%;
 }
 
-/* ── HERO DEGRADADO SUAVE ── */
 .hero-bg {
     background-image: url("assets/imagenes/qnportada.jpeg");
     background-size: cover;
@@ -112,9 +111,8 @@ section {
     }
 }
 
-/* ── LA SOLUCIÓN AL RESPONSIVO MÓVIL ── */
 .card-estricta {
-    min-height: 380px; /* Obliga al motor del celular a darle espacio físico a la foto */
+    min-height: 380px; 
     transition: transform 0.25s ease;
 }
 
@@ -126,7 +124,6 @@ section {
     background: linear-gradient(to top, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.65) 60%, transparent 100%);
 }
 
-/* Clases del Panel Admin (mantenidas para que admin.html no pierda su maquetado) */
 .admin-label {
     display: block; font-size: 0.8rem; font-weight: 600;
     text-transform: uppercase; letter-spacing: 0.04em; color: #444; margin-bottom: 4px;
@@ -136,3 +133,47 @@ section {
     padding: 10px 14px; font-size: 0.95rem; outline: none; transition: border-color 0.2s;
 }
 .admin-input:focus { border-color: #000; }
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#admin-panel, .admin-container, .panel-admin {
+    width: 90% !important;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    display: block;
+}
+
+table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+input, select, textarea, button {
+    width: 100% !important;
+    display: block;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .admin-grid, .row {
+        flex-direction: column !important;
+        display: flex;
+    }
+    
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.2rem; }
+}
